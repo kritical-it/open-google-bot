@@ -1,0 +1,48 @@
+{
+  "name": "kritical-it/open-google-bot",
+  "description": "Allow google bot to crawl your premium or protected content",
+  "type": "craft-plugin",
+  "license": "mit",
+  "support": {
+    "email": "info@gongarce.io",
+    "issues": "https://github.com/kritical-it/open-google-bot/issues?state=open",
+    "source": "https://github.com/kritical-it/open-google-bot",
+    "docs": "https://github.com/kritical-it/open-google-bot",
+    "rss": "https://github.com/kritical-it/open-google-bot/releases.atom"
+  },
+  "require": {
+    "php": ">=8.2",
+    "craftcms/cms": "^5.9.0",
+    "yiisoft/yii2-redis": "^2.1"
+  },
+  "require-dev": {
+    "craftcms/ecs": "dev-main",
+    "craftcms/phpstan": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "KriticalIT\\OpenGoogleBot\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "open-google-bot",
+    "name": "Open Google Bot",
+    "developer": "Kritical IT",
+    "documentationUrl": "https://github.com/kritical-it/open-google-bot"
+  },
+  "scripts": {
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix",
+    "phpstan": "phpstan --memory-limit=1G"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}
