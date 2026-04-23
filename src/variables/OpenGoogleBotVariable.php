@@ -3,12 +3,11 @@
 namespace KriticalIT\OpenGoogleBot\variables;
 
 use KriticalIT\OpenGoogleBot\Plugin;
-use modules\consejeros\services\GoogleBotValidatorService;
 
 class OpenGoogleBotVariable
 {
-    public function get(): GoogleBotValidatorService
+    public function isGoogleBot(): bool
     {
-        return Plugin::getInstance()->validator;
+        return Plugin::getInstance()->validator->isGoogleBot();
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace modules\consejeros\services;
+namespace KriticalIT\OpenGoogleBot\services;
 
 use Craft;
-use yii\base\Component;
+use craft\base\Component;
 
 /**
  * GoogleBotValidator Service

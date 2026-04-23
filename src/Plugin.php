@@ -2,11 +2,10 @@
 
 namespace KriticalIT\OpenGoogleBot;
 
-use Craft;
 use craft\base\Plugin as BasePlugin;
 use craft\web\twig\variables\CraftVariable;
+use KriticalIT\OpenGoogleBot\services\GoogleBotValidatorService;
 use KriticalIT\OpenGoogleBot\variables\OpenGoogleBotVariable;
-use modules\consejeros\services\GoogleBotValidatorService;
 use yii\base\Event;
 
 /**
@@ -36,10 +35,6 @@ class Plugin extends BasePlugin
     public function init(): void
     {
         parent::init();
-
-        if (Craft::$app->getRequest()->getIsConsoleRequest()) {
-            $this->controllerNamespace = 'KriticalIT\OpenGoogleBot\console\controllers';
-        }
 
         $this->setComponents([
             'validator' => GoogleBotValidatorService::class,
